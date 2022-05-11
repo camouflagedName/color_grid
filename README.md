@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Color Grid
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I decided to build this after reading an article on cryptography where an image can be hidden inside of a pixel of another image. While this app has completely nothing to do with any of that, I became intrigued with the idea of generating a gride of colored boxes or pixels using random values that corresponded with RBG color codes and thought this woudl be a simple enough project that could be created in a short period of time. Plus, in my head, I imagined cool and interesting patterns or designs emerging. While it was a quick project, it definitely did not produce the amazing Bansky-level artowrk I was hoping for.
 
-## Available Scripts
 
-In the project directory, you can run:
+### Stack
+React and Bootstrap
 
-### `npm start`
+### Method
+The app takes user input that is used to determine how big the grid will be (a square of that number). When thsi is submitted, it calls a draw function on an interval (currently 100 ms). This function calls a hex converter function which generates 3 random numbers (r, b, g), converts each into a hex value, and then concatenates them into a hex color code. A dynamic for loop (size is based on user input) inserts graphic into a canvas element. Each graphic has a random hex color code assigned to its fillstyle. And voila! Art...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The start button also changes to a pause button. Fancy, I know.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### To Do
+- value checking on input (i.e. numbers only)
+- UI improvements
+- additional features including adding a speed controller
+- I was thinking it might be cool to create a chart that tracks how many times the same color is called. Cool is currently being defined by the same person who thought a simple program could create modern art.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Issues
+Going past 200, which is 40,000 "rectangles" results in performance issues. I successfully entered in 1000 as an input, or 1,000,000 rectangles and nothing broke. Of course I added in an extra 0 quickly after which seemed to eat up all the memory, though addmitedly, I never saw a "kill page" alert.
