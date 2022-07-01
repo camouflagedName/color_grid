@@ -30,7 +30,7 @@ function App() {
     event.preventDefault()
     if (numInput && numInput > 0) {
       if (buttonValue === "START") {
-        intervalController.current = setInterval(() => draw(numInput), 10)
+        intervalController.current = setInterval(() => draw(numInput), 100)
         setButtonValue("PAUSE")
         setButtonColor("primary")
         setButtonIcon(pauseIcon)
