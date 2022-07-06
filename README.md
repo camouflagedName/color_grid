@@ -2,7 +2,7 @@
 
 This was built quickly one evening before bed, so, sadly, the UI is lacking flourish.
 
-I decided to build this after reading an article on cryptography where an image can be hidden inside of a pixel of another image. While this app has completely nothing to do with any of that, I became intrigued with the idea of generating a gride of colored boxes or pixels using random values that corresponded with RBG color codes and thought this woudl be a simple enough project that could be created in a short period of time. Plus, in my head, I imagined cool and interesting patterns or designs emerging. While it was a quick project, it definitely did not produce the amazing Bansky-level artowrk I was hoping for.
+I decided to build this after reading an article on cryptography that described how an image can be hidden inside of a pixel of another image. While this app has almost nothing to do with any of that, I became intrigued with the idea of generating a grid of colored boxes or pixels using random values that corresponded with RBG color codes and thought this woudl be a simple enough project that could be created in a short period of time. Plus, in my head, I imagined cool and interesting patterns or designs emerging. While it was a quick project, it definitely did not produce the amazing Bansky-level artowrk I was hoping for.
 
 
 ### Stack
