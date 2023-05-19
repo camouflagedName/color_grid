@@ -3,8 +3,10 @@
  * 
  * @returns {number} A number between 0 and 255
  */
-export const randomNumber = () => {
-    return Math.floor(Math.random() * 256)
+export const randomNumber = (max = 255) => {
+    if (max > 255) max = 255;
+    if (max < 0) max = 0;
+    return Math.floor(Math.random() * (max + 1))
 }
 
 /**
